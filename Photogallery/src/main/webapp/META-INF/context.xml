@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<Context path='/photogallery'>
+<Resource name='jdbc/photogallery'
+type='javax.sql.DataSource' driverClassName='com.mysql.jdbc.Driver'
+url='jdbc:mysql://localhost/photogallery'
+username='root' password='vdab'
+closeMethod='close' />
+</Context>
