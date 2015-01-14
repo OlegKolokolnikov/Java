@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm
+http://java.sun.com/xml/ns/persistence/orm_2_0.xsd"
+version="2.0">
+<named-query name="findAllFilialen">
+<query>
+select f from Filiaal f order by f.naam
+</query>
+</named-query>
+<named-query name="findFilialenByPostcode">
+<query>
+select f from Filiaal f
+where f.adres.postcode between :van and :tot order by f.naam
+</query>
+</named-query>
+<named-query name="findAantalFilialen">
+<query>
+select count(f) from Filiaal f
+</query>
+</named-query>
+<named-query name="findFiliaalByNaam"> <!-- wordt later in cursus gebruikt -->
+<query>
+select f from Filiaal f where f.naam = :naam
+</query>
+</named-query>
+<named-query name="findAllWerknemers">
+<query>
+select w from Werknemer w order by w.familienaam, w.voornaam
+</query>
+</named-query>
+</entity-mappings>

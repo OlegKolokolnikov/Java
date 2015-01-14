@@ -1,0 +1,33 @@
+body {
+	font-family: Verdana;
+}
+.zonderbolletjes {
+	list-style: none;
+	padding: 0;
+	margin-bottom: 0.2em;
+}
+.zonderbolletjes li {
+	display: inline;
+	margin-right: 0.2em;
+}
+dt {
+	font-weight:bold;
+	margin-top: 0.5em;
+	padding: 0;
+}
+dd {
+	margin: 0;
+	padding: 0;
+}
+input {
+	display:block;
+	font-size:1.1em;
+	margin-bottom:0.5em;
+}
+div.rij input {
+	display:inline;
+}
+.fout { /* voor foutmeldingen */
+	color:red;
+	margin-left:5px;
+}

@@ -1,0 +1,24 @@
+package be.vdab.dao;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import javax.sql.DataSource;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+@RunWith(SpringJUnit4ClassRunner.class) 
+@ContextConfiguration("classpath:/conf/springDAO.xml")
+public class DataSourceTest {
+	@Autowired 
+	private DataSource dataSource;
+	@Test
+	public void getConnection() throws SQLException {
+	Connection connection = dataSource.getConnection(); 
+	connection.close();
+	}
+}
