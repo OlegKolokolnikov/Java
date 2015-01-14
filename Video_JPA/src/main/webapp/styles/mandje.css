@@ -1,0 +1,23 @@
+table{
+    padding:1px;
+    height: 50%;
+    width: 50%
+}
+th{
+    background-color: lightsteelblue;
+}
+td{
+    background-color: lightblue;
+    padding: 5px;
+    
+}
+.midden{
+    text-align: center;
+}
+.totaal{
+    background-color: #f3f5ff;
+}
+.fout {
+color:red;
+font-weight: bold;
+}
