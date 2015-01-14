@@ -1,0 +1,5 @@
+package be.vdab.video.exceptions;
+
+public class KlantNietGevondenException extends RuntimeException{
+	private static final long serialVersionUID = 1L;
+}
