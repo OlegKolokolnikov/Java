@@ -40,8 +40,6 @@ CategoryServiseImpl(CategoryDAO categoryDAO){
 			categoryDAO.delete(categoryId);
 		}
 		
-		categoryDAO.delete(categoryId);
-		
 	}
 
 	@Override

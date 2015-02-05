@@ -9,6 +9,7 @@ import org.springframework.data.web.config.EnableSpringDataWebSupport;
 import org.springframework.validation.Validator;
 import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import org.springframework.validation.beanvalidation.SpringValidatorAdapter;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
@@ -57,4 +58,11 @@ public class CreateControllerBeans extends WebMvcConfigurerAdapter{
 	public Validator getValidator() {
 	return new SpringValidatorAdapter(validatorFactory().getValidator()); 
 	}
+	@Bean
+	CommonsMultipartResolver multipartResolver(){
+		CommonsMultipartResolver resolver = new CommonsMultipartResolver();
+		resolver.setMaxUploadSize(1000000);
+		return resolver;
+	}
+	
 }

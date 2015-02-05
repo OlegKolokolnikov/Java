@@ -55,7 +55,7 @@ public class AdminController {
 	@RequestMapping(value = "{category}/delete", method = RequestMethod.POST)
 	String delete(@PathVariable Category category, RedirectAttributes redirectAttributes) {
 		if (category == null) { 
-		return "redirect:/makenewcategory";
+		return "redirect:/categorymanager";
 		}
 		long id = category.getCategoryId();
 		try {
@@ -73,4 +73,5 @@ public class AdminController {
 	ModelAndView deleted(String name) {
 	return new ModelAndView("deleted", "name", name);
 	}
+	
 }

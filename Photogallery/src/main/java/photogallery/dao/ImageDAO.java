@@ -8,6 +8,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import photogallery.entities.Image;
 
 public interface ImageDAO extends JpaRepository<Image, Long>{
-	 @EntityGraph("Image.withCategory") 
+	@EntityGraph("Image.withCategory") 
 	 public List<Image> findByCategoryId(long categoryId); 
 }
